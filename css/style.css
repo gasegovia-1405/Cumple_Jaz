@@ -172,9 +172,9 @@
   .popup-contenido button {
     margin-top: 10px;
     background: #447D8E;
-    color: white;
+    color: #ff799d;
     border: none;
-    padding: 8px 16px;
+    padding: 16px 32px;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.2s;
