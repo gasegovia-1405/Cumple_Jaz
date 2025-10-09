@@ -60,14 +60,12 @@
     <p>28 de Septiembre de 2026 | 21:00 hs</p>
   </section>
 
-<!-- SECCIÓN: DÓNDE -->
 <section class="donde" data-aos="fade-up">
   <h2>¿Dónde?</h2>
   <p>Salón de Eventos "La Francisca"</p>
   <button class="enviar" onclick="mostrarPopup('popup_donde')">Cómo llegar</button>
 </section>
 
-<!-- POP-UP: DÓNDE -->
 <div id="popup_donde" class="popup">
   <div class="popup-contenido">
     <iframe 
@@ -81,7 +79,6 @@
   </div>
 </div>
 
-<!-- SECCIÓN: REGALOS -->
 <section class="regalos" data-aos="fade-up">
   <h2>Regalos</h2>
   <p>
@@ -91,7 +88,6 @@
   <button class="enviar" onclick="mostrarPopup('popup_regalos')">Ver datos</button>
 </section>
 
-<!-- POP-UP: REGALOS -->
 <div id="popup_regalos" class="popup">
   <div class="popup-contenido">
     <p>🎁 <strong>Regalos</strong></p>
@@ -101,18 +97,14 @@
   </div>
 </div>
 
-<!-- SCRIPT UNIFICADO -->
 <script>
   function mostrarPopup(id) {
-    // Cierra cualquier popup abierto antes
     document.querySelectorAll('.popup').forEach(p => p.style.display = "none");
 
-    // Muestra el popup correspondiente
     const popup = document.getElementById(id);
     popup.style.display = "flex";
     popup.classList.add("fade-in");
 
-    // Quita la clase después de la animación
     setTimeout(() => popup.classList.remove("fade-in"), 300);
   }
 
@@ -149,7 +141,6 @@
     </div>
   </section>
 
-  <!-- FORMULARIO -->
   <section class="formulario" data-aos="fade-up">
     <h2>Confirmá tu asistencia</h2>
     <p>Antes del 26 de Agosto de 2026</p>
@@ -161,7 +152,6 @@
     </form>
   </section>
   
-  <!-- FOOTER -->
   <footer>
     <p>Con todo mi cariño 💕 — Jazmín</p>
     <p>Seguime en 
@@ -170,13 +160,11 @@
     </p>
   </footer>
 
-  <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
 
-    // ==== CONTADOR REGRESIVO ====
     var countDownDate = new Date("Sep 28, 2026 21:00:00").getTime();
     var x = setInterval(function() {
       var now = new Date().getTime();
