@@ -93,6 +93,30 @@
     }
     .lugar button:hover {
       background-color: #ff799d;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .formulario_wsp{
+      background-color: #fff;
+      color: black;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .formulario_wsp button {
+      background-color: #ff4d79;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s;
     }
     .regalos{
         background-color: #fef1e6;

@@ -151,23 +151,36 @@
         <strong>
           <p>Adulto $65.000</p>
           <p>por joven  $60.000</p>
-          <p>Niño de 5 a 12 niños $20.000</p>
+          <p>Niño de 5 a 12 $20.000</p>
         </strong>
       </p>
     <button onclick="cerrarPopup()">Cerrar</button>
   </div>
 </div>
-
-  <section class="formulario" data-aos="fade-up">
+<section class="formulario_wsp" data-aos="fade-up">
     <h2>Confirmá tu asistencia</h2>
     <p>Antes del 26 de Agosto de 2026</p>
-    <form>
-      <input type="text" placeholder="Tu nombre completo" required>
-      <input type="email" placeholder="Tu correo electrónico" required>
-      <textarea rows="4" placeholder="Mensaje o cantidad de acompañantes"></textarea>
-      <button type="submit" class="enviar">Enviar confirmación</button>
-    </form>
-  </section>
+    <form action="https://formsubmit.co/+5492665272102@whatsapp" method="POST">
+    <input type="hidden" name="_template" value="table"> <!-- Opcional: Formato del mensaje -->
+  
+    <!-- Campo para el nombre -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    
+    <!-- Campo para el correo o teléfono -->
+    <label for="contacto">Correo o Teléfono:</label>
+    <input type="text" id="contacto" name="contacto" required>
+    
+    <!-- Campo para el número de asistentes -->
+    <label for="asistentes">Número de asistentes:</label>
+    <input type="number" id="asistentes" name="asistentes" min="1" required>
+    
+    <!-- Botón de envío -->
+    <button type="submit">Enviar por WhatsApp</button>
+  </form>
+  </script>
+    </section>
+    
   
   <footer>
     <p>Con todo mi cariño 💕 — Jazmín</p>
