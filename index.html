@@ -60,11 +60,11 @@
     <p>28 de Septiembre de 2026 | 21:00 hs</p>
   </section>
 
-<section class="donde" data-aos="fade-up">
-  <h2>¿Dónde?</h2>
-  <p>Salón de Eventos "La Francisca"</p>
-  <button class="enviar" onclick="mostrarPopup('popup_donde')">Cómo llegar</button>
-</section>
+  <section class="donde" data-aos="fade-up">
+    <h2>¿Dónde?</h2>
+    <p>Salón de Eventos "La Francisca"</p>
+    <button class="enviar" onclick="mostrarPopup('popup_donde')">Cómo llegar</button>
+  </section>
 
 <div id="popup_donde" class="popup">
   <div class="popup-contenido">
@@ -140,6 +140,23 @@
       </button>
     </div>
   </section>
+
+  <section class="tarjeta" data-aos="fade-up">
+    <button class="enviar" onclick="mostrarPopup('popup_tarjeta')">Valor de la Tarjeta</button>
+  </section>
+  
+  <div id="popup_tarjeta" class="popup">
+    <div class="popup-contenido">
+      <p>
+        <strong>
+          <p>Adulto $65.000</p>
+          <p>por joven  $60.000</p>
+          <p>Niño de 5 a 12 niños $20.000</p>
+        </strong>
+      </p>
+    <button onclick="cerrarPopup()">Cerrar</button>
+  </div>
+</div>
 
   <section class="formulario" data-aos="fade-up">
     <h2>Confirmá tu asistencia</h2>
