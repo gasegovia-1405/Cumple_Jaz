@@ -141,36 +141,32 @@
 
   
   /* Fondo semitransparente */
-  .popup {
+ .popup {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
-  }
-   .popup_donde {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+    z-index: 1000;
   }
 
-  /* Caja del mensaje */
+  /* Contenido del popup */
   .popup-contenido {
-    background: #fef1e6;
-    padding: 20px 30px;
-    border-radius: 25px;
+    background: #fff;
+    padding: 25px 35px;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    animation: scaleIn 0.3s ease;
+  }
+
+  .popup-contenido iframe {
+    border-radius: 12px;
+    margin-bottom: 10px;
   }
 
   .popup-contenido button {
@@ -181,9 +177,27 @@
     padding: 8px 16px;
     border-radius: 8px;
     cursor: pointer;
+    transition: 0.2s;
   }
 
+  .popup-contenido button:hover {
+    background: #355e6d;
+  }
 
+  /* Animación suave de aparición */
+  .fade-in {
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
     /* ==== RESPONSIVE ==== */
     @media (max-width: 768px) {
       header.hero h1 {

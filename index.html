@@ -60,57 +60,67 @@
     <p>28 de Septiembre de 2026 | 21:00 hs</p>
   </section>
 
-  <section class="donde" data-aos="fade-up">
-    <h2>¿Dónde?</h2>
-    <p>Salón de Eventos "La Francisca"</p>
-    <button class="enviar" onclick="mostrarPopup()">Cómo llegar</button>
-  </section>
+<!-- SECCIÓN: DÓNDE -->
+<section class="donde" data-aos="fade-up">
+  <h2>¿Dónde?</h2>
+  <p>Salón de Eventos "La Francisca"</p>
+  <button class="enviar" onclick="mostrarPopup('popup_donde')">Cómo llegar</button>
+</section>
 
-  <div id="popup_donde" class="popup">
+<!-- POP-UP: DÓNDE -->
+<div id="popup_donde" class="popup">
   <div class="popup-contenido">
-    <div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.7836718343456!2d-64.3554286!3d-33.1673057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d1ffc03c09c467%3A0xd0a3e4fe64e7e246!2sLa%20Francisca!5e0!3m2!1ses-419!2sar!4v1760039468545!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.7836718343456!2d-64.3554286!3d-33.1673057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d1ffc03c09c467%3A0xd0a3e4fe64e7e246!2sLa%20Francisca!5e0!3m2!1ses-419!2sar!4v1760039468545!5m2!1ses-419!2sar"
+      width="400" height="300" style="border:0;" 
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      frameborder="0">
+    </iframe>
     <button onclick="cerrarPopup()">Cerrar</button>
   </div>
 </div>
 
-  <section class="regalos" data-aos="fade-up">
+<!-- SECCIÓN: REGALOS -->
+<section class="regalos" data-aos="fade-up">
   <h2>Regalos</h2>
   <p>
     Nada es más importante que tu presencia,  
     pero si deseas hacerme un presente, podés hacerlo en la siguiente cuenta:
   </p>
-  <button class="enviar" onclick="mostrarPopup()">Ver datos</button>
+  <button class="enviar" onclick="mostrarPopup('popup_regalos')">Ver datos</button>
 </section>
 
-<div id="popup" class="popup">
+<!-- POP-UP: REGALOS -->
+<div id="popup_regalos" class="popup">
   <div class="popup-contenido">
-    <p>🎁REGALOS</p>
-    <p>ALIAS </p>
-    <p>ASDLJ.ASDAD.ASDASD</p>
+    <p>🎁 <strong>Regalos</strong></p>
+    <p>Alias: <strong> jachu.xv</strong></p>
+    <p><strong>NaranjaX</strong></p>
     <button onclick="cerrarPopup()">Cerrar</button>
   </div>
 </div>
 
+<!-- SCRIPT UNIFICADO -->
 <script>
-  function mostrarPopup() {
-    document.getElementById("popup").style.display = "flex";
+  function mostrarPopup(id) {
+    // Cierra cualquier popup abierto antes
+    document.querySelectorAll('.popup').forEach(p => p.style.display = "none");
+
+    // Muestra el popup correspondiente
+    const popup = document.getElementById(id);
+    popup.style.display = "flex";
+    popup.classList.add("fade-in");
+
+    // Quita la clase después de la animación
+    setTimeout(() => popup.classList.remove("fade-in"), 300);
   }
 
   function cerrarPopup() {
-    document.getElementById("popup").style.display = "none";
+    document.querySelectorAll('.popup').forEach(p => p.style.display = "none");
   }
 </script>
-<script>
-  function mostrarPopup() {
-    document.getElementById("popup_donde").style.display = "flex";
-  }
 
-  function cerrarPopup() {
-    document.getElementById("popup_donde").style.display = "none";
-  }
-</script>
   
   <section data-aos="fade-up">
     <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel">
