@@ -168,6 +168,12 @@ section p {
 }
 
 /* ==== FORMULARIO WHATSAPP ==== */
+.formulario_wsp h3 {
+  font-family: "Pacifico", cursive;
+  color: #ff4d79;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 .formulario_wsp {
   background-color: #fff5f8;
   padding: 4rem 1.5rem;
