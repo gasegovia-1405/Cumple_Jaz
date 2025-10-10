@@ -1,0 +1,30 @@
+<form onsubmit="enviarWhatsApp(event)">
+  <input type="text" id="nombre" placeholder="Nombre" required>
+  <input type="text" id="apellido" placeholder="Apellido" required>
+  
+  <select id="asistentes">
+    <option value="1">1 persona</option>
+    <option value="2">2 personas</option>
+    <option value="3">3 personas</option>
+    <option value="4">4 personas</option>
+    <option value="5">5 personas</option>
+    <option value="6">6 personas</option>
+    <option value="x">Hay descuento por cantidad?</option>
+  </select>
+
+  <button type="submit">Enviar por WhatsApp</button>
+</form>
+
+<script>
+function enviarWhatsApp(event) {
+  event.preventDefault(); // Evita que el formulario recargue la página
+  
+  const nombre = document.getElementById("nombre").value;
+  const apellido = document.getElementById("apellido").value;
+  const asistentes = document.getElementById('asistentes').value;
+  
+  const mensaje = `¡Hola! vamos al cumple y somos...\n\n*Nombre:* ${nombre} ${apellido}\n*Número de asistentes:* ${asistentes}`;
+  
+  window.open(`https://wa.me/2665272102?text=${encodeURIComponent(mensaje)}`, '_blank');
+}
+</script>

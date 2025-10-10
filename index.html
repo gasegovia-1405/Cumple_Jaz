@@ -154,28 +154,37 @@
   </div>
 </div>
 <section class="formulario_wsp" data-aos="fade-up">
-    <h2>Confirmá tu asistencia</h2>
-    <p>Antes del 26 de Agosto de 2026</p>
-    <form action="https://formsubmit.co/+5492665272102@whatsapp" method="POST">
-    <input type="hidden" name="_template" value="table"> <!-- Opcional: Formato del mensaje -->
-  
-    <!-- Campo para el nombre -->
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
+  <form onsubmit="enviarWhatsApp(event)">
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="text" id="apellido" placeholder="Apellido" required>
     
-    <!-- Campo para el correo o teléfono -->
-    <label for="contacto">Correo o Teléfono:</label>
-    <input type="text" id="contacto" name="contacto" required>
-    
-    <!-- Campo para el número de asistentes -->
-    <label for="asistentes">Número de asistentes:</label>
-    <input type="number" id="asistentes" name="asistentes" min="1" required>
-    
-    <!-- Botón de envío -->
+    <select id="asistentes">
+      <option value="1">1 persona</option>
+      <option value="2">2 personas</option>
+      <option value="3">3 personas</option>
+      <option value="4">4 personas</option>
+      <option value="5">5 personas</option>
+      <option value="6">6 personas</option>
+      <option value="x">Hay descuento por cantidad?</option>
+    </select>
+
     <button type="submit">Enviar por WhatsApp</button>
   </form>
-  </script>
-    </section>
+  
+  <script>
+      function enviarWhatsApp(event) {
+      event.preventDefault(); // Evita que el formulario recargue la página
+      
+      const nombre = document.getElementById("nombre").value;
+      const apellido = document.getElementById("apellido").value;
+      const asistentes = document.getElementById('asistentes').value;
+      
+      const mensaje = `¡Hola! vamos al cumple y somos...\n\n*Nombre:* ${nombre} ${apellido}\n*Número de asistentes:* ${asistentes}`;
+      
+      window.open(`https://wa.me/2665272102?text=${encodeURIComponent(mensaje)}`, '_blank');
+    }
+    </script>
+</section>
     
   
   <footer>

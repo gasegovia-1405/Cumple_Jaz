@@ -1,233 +1,365 @@
  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: "Montserrat", sans-serif;
-      background-color: #fff;
-      color: #333;
-      overflow-x: hidden;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /* ==== HERO ==== */
-    header.hero {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
-    header.hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(70%);
-    }
-    header.hero h1 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: "Pacifico", cursive;
-      color: #fff;
-      font-size: 4rem;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-    }
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  color: #333;
+  overflow-x: hidden;
+}
 
-    /* ==== CONTADOR ==== */
-    .countdown {
-      background-color: #fff5f8;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    .countdown h2 {
-      font-family: "Pacifico", cursive;
-      color: #ff4d79;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    #timer {
-      font-size: 2rem;
-      font-weight: 600;
-    }
+/* ==== HERO ==== */
+header.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    /* ==== SECCIONES ==== */
-    section {
-      padding: 4rem 1.5rem;
-      text-align: center;
-    }
-    section h2 {
-      font-family: "Pacifico", cursive;
-      color: #ff4d79;
-      margin-bottom: 1rem;
-    }
-    section p {
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      line-height: 1.6;
-    }
+header.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
 
-    /* ==== CARRUSEL ==== */
-    .carousel img {
-      border-radius: 15px;
-      object-fit: cover;
-    }
+header.hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Pacifico", cursive;
+  color: #fff;
+  font-size: 4rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
 
-    /* ==== SECCIÓN DONDE ==== */
-    .cuando {
-      background-color: #fef1e6;
-    }
-    .donde{
-        background-color: #fff;
-    }
-    .tarjeta{
-      background-color: #fef1e6;
-    }
-    .donde button {
-      background-color: #ff4d79;
-      color: #fff;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .lugar button:hover {
-      background-color: #ff799d;
-      color: #fff;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .formulario_wsp{
-      background-color: #fff;
-      color: black;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .formulario_wsp button {
-      background-color: #ff4d79;
-      color: #fff;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .regalos{
-        background-color: #fef1e6;
-    }
+/* ==== CONTADOR ==== */
+.countdown {
+  background-color: #fff5f8;
+  text-align: center;
+  padding: 3rem 1rem;
+}
 
-    /* ==== FORMULARIO ==== */
-    .formulario {
-      background-color: #fff5f8;
-    }
-    form {
-      max-width: 600px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      font-size: 1rem;
-    }
-    button.enviar {
-      background-color: #ff4d79;
-      color: white;
-      border: none;
-      padding: 0.8rem;
-      border-radius: 25px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    button.enviar:hover {
-      background-color: #ff799d;
-    }
+.countdown h2 {
+  font-family: "Pacifico", cursive;
+  color: #ff4d79;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
-    /* ==== FOOTER ==== */
-    footer {
-      background-color: #2e2e2e;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    footer a {
-      color: #ff4d79;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+#timer {
+  font-size: 2rem;
+  font-weight: 600;
+}
 
-  
-  /* Fondo semitransparente */
- .popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+/* ==== SECCIONES ==== */
+section {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+section h2 {
+  font-family: "Pacifico", cursive;
+  color: #ff4d79;
+  margin-bottom: 1rem;
+}
+
+section p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* ==== CARRUSEL ==== */
+.carousel img {
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* ==== SECCIÓN CUANDO ==== */
+.cuando {
+  background-color: #fef1e6;
+}
+
+.cuando h2 {
+  font-family: "Pacifico", cursive;
+  color: #ff4d79;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cuando p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ==== SECCIÓN DONDE ==== */
+.donde {
+  background-color: #fff;
+}
+
+.donde h2 {
+  font-family: "Pacifico", cursive;
+  color: #ff4d79;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.donde button {
+  background-color: #ff4d79;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.donde button:hover {
+  background-color: #ff799d;
+}
+
+/* ==== SECCIÓN REGALOS ==== */
+.regalos {
+  background-color: #fef1e6;
+}
+
+.regalos h2 {
+  font-family: "Pacifico", cursive;
+  color: #ff4d79;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.regalos button {
+  background-color: #ff4d79;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.regalos button:hover {
+  background-color: #ff799d;
+}
+
+/* ==== SECCIÓN TARJETA ==== */
+.tarjeta {
+  background-color: #fff;
+}
+
+.tarjeta button {
+  background-color: #ff4d79;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tarjeta button:hover {
+  background-color: #ff799d;
+}
+
+/* ==== FORMULARIO WHATSAPP ==== */
+.formulario_wsp {
+  background-color: #fff5f8;
+  padding: 4rem 1.5rem;
+}
+
+.formulario_wsp form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario_wsp input,
+.formulario_wsp select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.formulario_wsp select {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.formulario_wsp button {
+  background-color: #ff4d79;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.formulario_wsp button:hover {
+  background-color: #ff799d;
+}
+
+/* ==== BOTÓN ENVIAR GENERAL ==== */
+button.enviar {
+  background-color: #ff4d79;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.enviar:hover {
+  background-color: #ff799d;
+}
+
+/* ==== POPUPS ==== */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-contenido {
+  background: #fff;
+  padding: 25px 35px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: scaleIn 0.3s ease;
+  max-width: 90%;
+}
+
+.popup-contenido iframe {
+  border-radius: 12px;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.popup-contenido p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.popup-contenido strong {
+  color: #ff4d79;
+}
+
+.popup-contenido button {
+  margin-top: 10px;
+  background: #ff4d79;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.popup-contenido button:hover {
+  background: #ff799d;
+}
+
+/* Animación suave de aparición */
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background-color: #2e2e2e;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: #ff4d79;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ff799d;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  header.hero h1 {
+    font-size: 2.5rem;
   }
 
-  /* Contenido del popup */
+  .countdown h2 {
+    font-size: 2rem;
+  }
+
+  #timer {
+    font-size: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  .carousel img {
+    width: 80% !important;
+  }
+
   .popup-contenido {
-    background: #fff;
-    padding: 25px 35px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    animation: scaleIn 0.3s ease;
+    padding: 20px;
+    max-width: 95%;
   }
 
   .popup-contenido iframe {
-    border-radius: 12px;
-    margin-bottom: 10px;
+    width: 100% !important;
+    height: 250px !important;
   }
-
-  .popup-contenido button {
-    margin-top: 10px;
-    background: #447D8E;
-    color: white;
-    border: none;
-    padding: 16px 32px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s;
-  }
-
-  .popup-contenido button:hover {
-    background: #355e6d;
-  }
-
-  /* Animación suave de aparición */
-  .fade-in {
-    animation: fadeIn 0.3s ease;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-  }
-
-  @keyframes scaleIn {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-  }
-    /* ==== RESPONSIVE ==== */
-    @media (max-width: 768px) {
-      header.hero h1 {
-        font-size: 2.5rem;
-      }
-    }
+}
