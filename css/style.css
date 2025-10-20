@@ -343,9 +343,12 @@ footer a:hover {
     font-size: 2.5rem;
   }
 @media (max-width: 768px) {
-  header.hero img {
-    object-position: 65% center;
-  }
+ header.hero img {
+  transform: scale(0.9); /* 0.9 = 90% del tamaño original */
+  object-position: 65% center;
+  object-fit: cover;
+  transition: transform 0.5s ease; /* opcional si querés animación suave */
+}
 }
 
   .countdown h2 {
