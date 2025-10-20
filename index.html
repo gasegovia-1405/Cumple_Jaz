@@ -6,70 +6,59 @@
   <title>Mis 15 Jazmín</title>
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero">
-    <img src="./assets/jazz_header.jpg" class="img-fluid" alt="Foto Jazmín">
-    <p sata-aos="zoom-in">
-      Mis 15
-    </p>
-    <h1 data-aos="zoom-in">
-          Jazmín
-    </h1>
-        
-  </header>
-    <section class="countdown" data-aos="fade-up">
-      <h2>Falta muy poco...</h2>
-      <p id="timer"></p>
-    </section>
-    <section data-aos="fade-up">
-      <p>
-        Hay momentos que se sueñan, se imaginan y se crean día a día.  
-        Hoy es tiempo de compartir lo soñado, de dejar que la magia nos envuelva y vivamos una noche llena de emociones, risas y brillos ✨
-      </p>
-    </section>
 
-    <section data-aos="fade-up">
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="d-flex justify-content-center carousel-row">
-        <img src="./assets/jazz (1).jpg" class="img-fluid mx-1 carousel-img" alt="">
-        <img src="./assets/jazz (2).jpg" class="img-fluid mx-1 carousel-img" alt="">
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="d-flex justify-content-center carousel-row">
-        <img src="./assets/jazz (4).jpg" class="img-fluid mx-1 carousel-img" alt="">
-        <img src="./assets/jazz (5).jpg" class="img-fluid mx-1 carousel-img" alt="">
-      </div>
-    </div>
+<!-- HERO -->
+<header class="hero">
+  <img src="./assets/jazz_header.jpg" class="img-fluid" alt="Foto Jazmín">
+  <p data-aos="zoom-in">Mis 15</p>
+  <h1 data-aos="zoom-in">Jazmín</h1>
+</header>
+
+<!-- COUNTDOWN -->
+<section class="countdown" data-aos="fade-up">
+  <h2>Falta muy poco...</h2>
+  <p id="timer"></p>
+</section>
+
+<!-- INTRO -->
+<section data-aos="fade-up">
+  <p>
+    Hay momentos que se sueñan, se imaginan y se crean día a día.  
+    Hoy es tiempo de compartir lo soñado, de dejar que la magia nos envuelva y vivamos una noche llena de emociones, risas y brillos ✨
+  </p>
+</section>
+
+<!-- CARRUSEL 1 -->
+<section data-aos="fade-up">
+  <div id="carouselDynamic1" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner"></div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDynamic1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDynamic1" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
+</section>
 
-    </section>
+<!-- SECCIONES CUANDO -->
+<section class="cuando" data-aos="fade-up">
+  <h2>¿Cuándo?</h2>
+  <p>28 de Septiembre de 2026 | 21:00 hs</p>
+</section>
 
-  <section class="cuando" data-aos="fade-up">
-    <h2>¿Cuándo?</h2>
-    <p>28 de Septiembre de 2026 | 21:00 hs</p>
-  </section>
-
-  <section class="donde" data-aos="fade-up">
-    <h2>¿Dónde?</h2>
-    <p>Salón de Eventos "La Francisca"</p>
-    <button class="enviar" onclick="mostrarPopup('popup_donde')">Cómo llegar</button>
-  </section>
+<!-- SECCIONES DONDE -->
+<section class="donde" data-aos="fade-up">
+  <h2>¿Dónde?</h2>
+  <p>Salón de Eventos "La Francisca"</p>
+  <button class="enviar" onclick="mostrarPopup('popup_donde')">Cómo llegar</button>
+</section>
 
 <div id="popup_donde" class="popup">
   <div class="popup-contenido">
@@ -84,6 +73,7 @@
   </div>
 </div>
 
+<!-- SECCIÓN REGALOS -->
 <section class="regalos" data-aos="fade-up">
   <h2>Regalos</h2>
   <p>
@@ -102,70 +92,41 @@
   </div>
 </div>
 
-<script>
-  function mostrarPopup(id) {
-    document.querySelectorAll('.popup').forEach(p => p.style.display = "none");
+<!-- CARRUSEL 2 -->
+<section data-aos="fade-up">
+  <div id="carouselDynamic2" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner"></div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDynamic2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDynamic2" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+<!-- SECCIÓN TARJETA -->
+<section class="tarjeta" data-aos="fade-up">
+  <button class="enviar" onclick="mostrarPopup('popup_tarjeta')">Valor de la Tarjeta</button>
+</section>
 
-    const popup = document.getElementById(id);
-    popup.style.display = "flex";
-    popup.classList.add("fade-in");
-
-    setTimeout(() => popup.classList.remove("fade-in"), 300);
-  }
-
-  function cerrarPopup() {
-    document.querySelectorAll('.popup').forEach(p => p.style.display = "none");
-  }
-</script>
-
-  
-  <section data-aos="fade-up">
-    <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="d-flex justify-content-center">
-            <img src="https://picsum.photos/id/1005/400/300" class="d-block w-25 mx-1" alt="">
-            <img src="https://picsum.photos/id/1011/400/300" class="d-block w-25 mx-1" alt="">
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="d-flex justify-content-center">
-            <img src="https://picsum.photos/id/1013/400/300" class="d-block w-25 mx-1" alt="">
-            <img src="https://picsum.photos/id/1015/400/300" class="d-block w-25 mx-1" alt="">
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-  </section>
-
-  <section class="tarjeta" data-aos="fade-up">
-    <button class="enviar" onclick="mostrarPopup('popup_tarjeta')">Valor de la Tarjeta</button>
-  </section>
-  
-  <div id="popup_tarjeta" class="popup">
-    <div class="popup-contenido">
-      <p>
-        <strong>
-          <p>Adulto $65.000</p>
-          <p>Joven  $60.000</p>
-          <p>Niños de 5 a 12 $20.000</p>
-        </strong>
-      </p>
+<div id="popup_tarjeta" class="popup">
+  <div class="popup-contenido">
+    <p>
+      <strong>
+        <p>Adulto $65.000</p>
+        <p>Joven  $60.000</p>
+        <p>Niños de 5 a 12 $20.000</p>
+      </strong>
+    </p>
     <button onclick="cerrarPopup()">Cerrar</button>
   </div>
 </div>
+<!-- FORMULARIO WHATSAPP -->
 <section class="formulario_wsp" data-aos="fade-up">
   <h3>Confirma tu Asistencia!</h3>
   <form onsubmit="enviarWhatsApp(event)">
     <input type="text" id="nombre" placeholder="Nombre" required>
     <input type="text" id="apellido" placeholder="Apellido" required>
-    
     <select id="asistentes">
       <option value="1">1 persona</option>
       <option value="2">2 personas</option>
@@ -175,54 +136,96 @@
       <option value="6">6 personas</option>
       <option value="x">Hay descuento por cantidad?</option>
     </select>
-
     <button type="submit">Enviar por WhatsApp</button>
   </form>
-  
-  <script>
-      function enviarWhatsApp(event) {
-      event.preventDefault(); // Evita que el formulario recargue la página
-      
-      const nombre = document.getElementById("nombre").value;
-      const apellido = document.getElementById("apellido").value;
-      const asistentes = document.getElementById('asistentes').value;
-      
-      const mensaje = `¡Hola! vamos al cumple y somos...\n\n*Nombre:* ${nombre} ${apellido}\n*Número de asistentes:* ${asistentes}`;
-      
-      window.open(`https://wa.me/+5493584314424?text=${encodeURIComponent(mensaje)}`, '_blank');
-    }
-    </script>
 </section>
-    
-  
-  <footer>
-    <p>Con todo mi cariño 💕 — Jazmín</p>
-    <p>Seguime en 
-      <a href="#">Instagram</a> | 
-      <a href="#">TikTok</a>
-    </p>
-  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
+<footer>
+  <p>Con todo mi cariño 💕 — Jazmín</p>
+  <p>Seguime en 
+    <a href="#">Instagram</a> | 
+    <a href="#">TikTok</a>
+  </p>
+</footer>
 
-    var countDownDate = new Date("Nov 22, 2025 21:00:00").getTime();
-    var x = setInterval(function() {
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      document.getElementById("timer").innerHTML =
-        days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("timer").innerHTML = "¡Llegó el gran día!";
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+
+  // ==== COUNTDOWN ====
+  var countDownDate = new Date("Nov 22, 2025 21:00:00").getTime();
+  setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000*60*60*24));
+    var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+    var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+    var seconds = Math.floor((distance % (1000*60)) / 1000);
+    document.getElementById("timer").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    if(distance < 0){
+      document.getElementById("timer").innerHTML = "¡Llegó el gran día!";
+    }
+  }, 1000);
+
+  // ==== POPUPS ====
+  function mostrarPopup(id){
+    document.querySelectorAll('.popup').forEach(p=>p.style.display="none");
+    const popup = document.getElementById(id);
+    popup.style.display = "flex";
+    popup.classList.add("fade-in");
+    setTimeout(()=> popup.classList.remove("fade-in"), 300);
+  }
+  function cerrarPopup(){
+    document.querySelectorAll('.popup').forEach(p=>p.style.display="none");
+  }
+
+  // ==== WHATSAPP FORM ====
+  function enviarWhatsApp(event){
+    event.preventDefault();
+    const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
+    const asistentes = document.getElementById("asistentes").value;
+    const mensaje = `¡Hola! vamos al cumple y somos...\n\n*Nombre:* ${nombre} ${apellido}\n*Número de asistentes:* ${asistentes}`;
+    window.open(`https://wa.me/+5493584314424?text=${encodeURIComponent(mensaje)}`, '_blank');
+  }
+
+  // ==== CARRUSELES DINÁMICOS ====
+  const images = [
+    './assets/jazz (1).jpg',
+    './assets/jazz (2).jpg',
+    './assets/jazz (4).jpg',
+    './assets/jazz (5).jpg'
+  ];
+
+  function createCarousel(carouselId){
+    const carouselInner = document.querySelector(`#${carouselId} .carousel-inner`);
+    function generateSlides(){
+      carouselInner.innerHTML = '';
+      const imagesPerSlide = window.innerWidth >= 785 ? 2 : 1;
+      for(let i=0;i<images.length;i+=imagesPerSlide){
+        const slide = document.createElement('div');
+        slide.classList.add('carousel-item');
+        if(i===0) slide.classList.add('active');
+        const slideContent = document.createElement('div');
+        slideContent.classList.add('d-flex','justify-content-center','flex-wrap');
+        for(let j=i;j<i+imagesPerSlide && j<images.length;j++){
+          const img = document.createElement('img');
+          img.src = images[j];
+          img.classList.add('img-fluid','mx-1','carousel-img');
+          slideContent.appendChild(img);
+        }
+        slide.appendChild(slideContent);
+        carouselInner.appendChild(slide);
       }
-    }, 1000);
-  </script>
-</body>
-</html>
+    }
+    generateSlides();
+    window.addEventListener('resize', generateSlides);
+  }
+
+  createCarousel('carouselDynamic1');
+  createCarousel('carouselDynamic2');
+</script>
