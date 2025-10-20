@@ -44,7 +44,7 @@ header.hero h1 {
   font-weight: normal;
   letter-spacing: 1px;
   position: absolute;
-  top: 75%;
+  top: 79%;
   left: 35%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -311,4 +311,17 @@ footer a:hover {
     width: 100% !important;
     height: 250px !important;
   }
+}
+#botonMusica {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ff4d79;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#botonMusica:hover {
+  background-color: #ff799d;
 }

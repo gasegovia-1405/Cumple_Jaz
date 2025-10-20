@@ -7,11 +7,115 @@
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    /* ==== PANTALLA DE BIENVENIDA ==== */
+    #welcome-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff4d79 0%, #ff799d 50%, #ffc3d1 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      opacity: 1;
+      transition: opacity 1.2s ease-out;
+    }
+
+    #welcome-screen.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .welcome-content {
+      text-align: center;
+      color: white;
+      animation: fadeInUp 1.2s ease-out;
+      padding: 2rem;
+    }
+
+    .welcome-content h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .welcome-content .subtitle {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      opacity: 0.95;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+       /* Animaciones */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Ocultar scroll mientras está la bienvenida */
+    body.welcome-active {
+      overflow: hidden;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .welcome-content h1 {
+        font-family: 'Poppins';
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+      }
+      
+      .welcome-content .subtitle {
+        font-family: 'Poppins', serif;
+        font-size: 1.2rem;
+      }
+
+      .loader {
+        width: 50px;
+        height: 50px;
+        border-width: 4px;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="welcome-active">
+
+<!-- PANTALLA DE BIENVENIDA -->
+<div id="welcome-screen">
+  <div class="welcome-content">
+    <h1>Mis 15</h1>
+    <p class="subtitle">Jazmín</p>
+    <hr>
+    <p class="subtitle">Estás invitado a acompañarme en mi noche tan especial</p>
+    <div class="loader"></div>
+  </div>
+</div>
 
 <!-- HERO -->
 <header class="hero">
@@ -63,7 +167,7 @@
 <div id="popup_donde" class="popup">
   <div class="popup-contenido">
     <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.7836718343456!2d-64.3554286!3d-33.1673057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d1ffc03c09c467%3A0xd0a3e4fe64e7e246!2sLa%20Francisca!5e0!3m2!1ses-419!2sar!4v1760039468545!5m2!1ses-419!2sar"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!3d3339.7836718343456!2d-64.3554286!3d-33.1673057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d1ffc03c09c467%3A0xd0a3e4fe64e7e246!2sLa%20Francisca!5e0!3m2!1ses-419!2sar!4v1760039468545!5m2!1ses-419!2sar"
       width="400" height="300" style="border:0;" 
       allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
@@ -104,6 +208,7 @@
     </button>
   </div>
 </section>
+
 <!-- SECCIÓN TARJETA -->
 <section class="tarjeta" data-aos="fade-up">
   <button class="enviar" onclick="mostrarPopup('popup_tarjeta')">Valor de la Tarjeta</button>
@@ -121,6 +226,7 @@
     <button onclick="cerrarPopup()">Cerrar</button>
   </div>
 </div>
+
 <!-- FORMULARIO WHATSAPP -->
 <section class="formulario_wsp" data-aos="fade-up">
   <h3>Confirma tu Asistencia!</h3>
@@ -140,6 +246,17 @@
   </form>
 </section>
 
+<!-- Música de fondo -->
+<audio id="musicaFondo" loop>
+  <source src="./assets/audio.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
+
+<!-- Botón para controlar la música -->
+<button id="botonMusica" class="enviar" style="position: fixed; top: 20px; right: 20px; z-index: 1001;">
+  🔊
+</button>
+
 <footer>
   <p>Con todo mi cariño 💕 — Jazmín</p>
   <p>Seguime en 
@@ -153,6 +270,23 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <script>
+  // ==== PANTALLA DE BIENVENIDA ====
+  function hideWelcome() {
+    const welcomeScreen = document.getElementById('welcome-screen');
+    welcomeScreen.classList.add('fade-out');
+    
+    setTimeout(() => {
+      welcomeScreen.style.display = 'none';
+      document.body.classList.remove('welcome-active');
+    }, 1200);
+  }
+
+  // Ocultar automáticamente después de 3 segundos
+  window.addEventListener('load', () => {
+    setTimeout(hideWelcome, 3000);
+  });
+
+  // ==== INICIALIZAR AOS ====
   AOS.init();
 
   // ==== COUNTDOWN ====
@@ -228,4 +362,29 @@
 
   createCarousel('carouselDynamic1');
   createCarousel('carouselDynamic2');
+
+  // ==== MÚSICA DE FONDO ====
+  const musica = document.getElementById('musicaFondo');
+  const botonMusica = document.getElementById('botonMusica');
+
+  window.addEventListener('load', () => {
+    const playPromise = musica.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        console.log("Autoplay bloqueado, el usuario debe iniciar la música.");
+      });
+    }
+  });
+
+  botonMusica.addEventListener('click', () => {
+    if (musica.paused) {
+      musica.play();
+      botonMusica.textContent = '🔊';
+    } else {
+      musica.pause();
+      botonMusica.textContent = '🔈';
+    }
+  });
 </script>
+</body>
+</html>
