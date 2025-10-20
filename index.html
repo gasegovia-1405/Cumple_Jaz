@@ -60,7 +60,14 @@
       letter-spacing: 1px;
     }
 
-       /* Animaciones */
+    .welcome-content hr {
+      border: none;
+      border-top: 2px solid rgba(255, 255, 255, 0.5);
+      width: 50%;
+      margin: 1.5rem auto;
+    }
+
+     /* Animaciones */
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -86,13 +93,11 @@
     /* Responsive */
     @media (max-width: 768px) {
       .welcome-content h1 {
-        font-family: 'Poppins';
         font-size: 2.5rem;
         letter-spacing: 2px;
       }
       
       .welcome-content .subtitle {
-        font-family: 'Poppins', serif;
         font-size: 1.2rem;
       }
 
@@ -154,7 +159,7 @@
 <!-- SECCIONES CUANDO -->
 <section class="cuando" data-aos="fade-up">
   <h2>¿Cuándo?</h2>
-  <p>22 de Noviembre de 2026 | 21:00 hs</p>
+  <p>22 de Noviembre de 2025 | 21:00 hs</p>
 </section>
 
 <!-- SECCIONES DONDE -->
@@ -282,6 +287,12 @@
     const welcomeScreen = document.getElementById('welcome-screen');
     welcomeScreen.classList.add('fade-out');
     
+    // 🎵 REPRODUCIR MÚSICA AUTOMÁTICAMENTE AL CERRAR LA BIENVENIDA
+    const musica = document.getElementById('musicaFondo');
+    musica.play().catch(error => {
+      console.log("No se pudo reproducir la música automáticamente");
+    });
+    
     setTimeout(() => {
       welcomeScreen.style.display = 'none';
       document.body.classList.remove('welcome-active');
@@ -374,15 +385,7 @@
   const musica = document.getElementById('musicaFondo');
   const botonMusica = document.getElementById('botonMusica');
 
-  window.addEventListener('load', () => {
-    const playPromise = musica.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(error => {
-        console.log("Autoplay bloqueado, el usuario debe iniciar la música.");
-      });
-    }
-  });
-
+  // Botón para pausar/reproducir manualmente
   botonMusica.addEventListener('click', () => {
     if (musica.paused) {
       musica.play();
