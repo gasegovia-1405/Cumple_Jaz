@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* ==== FUENTES ==== */
 @font-face {
   font-family: 'White Dream';
   src: url('../assets/AnyConv.com__WhiteDreamPERSONALUSEONLY-Regular.ttf') format('truetype');
@@ -13,14 +15,12 @@
 /* Fuente de Google */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222;
-  background-color: #fff;
   color: #333;
+  background-color: #fff;
   overflow-x: hidden;
 }
 
@@ -49,8 +49,9 @@ header.hero h1 {
   transform: translate(-50%, -50%);
   color: #fff;
 }
-header p {
-  font-family: 'Poppins', cursive;
+
+header.hero p {
+  font-family: 'Poppins', sans-serif;
   font-size: 55px;
   font-weight: normal;
   letter-spacing: 1px;
@@ -61,7 +62,6 @@ header p {
   color: #fff;
 }
 
-
 /* ==== CONTADOR ==== */
 .countdown {
   background-color: #fff5f8;
@@ -70,7 +70,7 @@ header p {
 }
 
 .countdown h2 {
-  font-family: "Pacifico", cursive;
+  font-family: 'Poppins', sans-serif;
   color: #ff4d79;
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -88,7 +88,7 @@ section {
 }
 
 section h2 {
-  font-family: "Pacifico", cursive;
+  font-family: 'Poppins', sans-serif;
   color: #ff4d79;
   margin-bottom: 1rem;
 }
@@ -97,89 +97,48 @@ section p {
   max-width: 700px;
   margin: 0 auto 2rem;
   line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* ==== CARRUSEL ==== */
-.carousel img {
-  border-radius: 15px;
-  object-fit: cover;
+/* Por defecto, 1 imagen por slide (móviles) */
+.carousel-img {
+  width: 45%; /* Ocupa casi todo el ancho */
+  max-width: 300px;
 }
 
-/* ==== SECCIÓN CUANDO ==== */
+/* A partir de 768px mostramos 2 imágenes */
+@media (max-width: 768px) {
+  .carousel-img {
+    width: 90%; /* Dos imágenes caben lado a lado */
+    max-width: none;
+  }
+}
+
+
+/* ==== SECCIONES ESPECÍFICAS ==== */
 .cuando {
   background-color: #fef1e6;
 }
 
-.cuando h2 {
-  font-family: "Pacifico", cursive;
-  color: #ff4d79;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
 .cuando p {
+  font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-/* ==== SECCIÓN DONDE ==== */
-.donde {
-  background-color: #fff;
-}
-
-.donde h2 {
-  font-family: "Pacifico", cursive;
-  color: #ff4d79;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.donde button {
-  background-color: #ff4d79;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.donde button:hover {
-  background-color: #ff799d;
-}
-
-/* ==== SECCIÓN REGALOS ==== */
-.regalos {
-  background-color: #fef1e6;
-}
-
-.regalos h2 {
-  font-family: "Pacifico", cursive;
-  color: #ff4d79;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.regalos button {
-  background-color: #ff4d79;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.regalos button:hover {
-  background-color: #ff799d;
-}
-
-/* ==== SECCIÓN TARJETA ==== */
+.donde,
+.regalos,
 .tarjeta {
   background-color: #fff;
 }
 
-.tarjeta button {
+.donde button,
+.regalos button,
+.tarjeta button,
+button.enviar,
+.popup-contenido button {
+  font-family: 'Poppins', sans-serif;
   background-color: #ff4d79;
   color: #fff;
   border: none;
@@ -189,20 +148,25 @@ section p {
   transition: all 0.3s;
 }
 
-.tarjeta button:hover {
+.donde button:hover,
+.regalos button:hover,
+.tarjeta button:hover,
+button.enviar:hover,
+.popup-contenido button:hover {
   background-color: #ff799d;
 }
 
 /* ==== FORMULARIO WHATSAPP ==== */
-.formulario_wsp h3 {
-  font-family: "Pacifico", cursive;
-  color: #ff4d79;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
 .formulario_wsp {
   background-color: #fff5f8;
   padding: 4rem 1.5rem;
+}
+
+.formulario_wsp h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #ff4d79;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .formulario_wsp form {
@@ -219,43 +183,12 @@ section p {
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 1rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .formulario_wsp select {
   cursor: pointer;
   background-color: #fff;
-}
-
-.formulario_wsp button {
-  background-color: #ff4d79;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.formulario_wsp button:hover {
-  background-color: #ff799d;
-}
-
-/* ==== BOTÓN ENVIAR GENERAL ==== */
-button.enviar {
-  background-color: #ff4d79;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button.enviar:hover {
-  background-color: #ff799d;
 }
 
 /* ==== POPUPS ==== */
@@ -291,29 +224,14 @@ button.enviar:hover {
 .popup-contenido p {
   margin: 0.5rem 0;
   font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .popup-contenido strong {
   color: #ff4d79;
 }
 
-.popup-contenido button {
-  margin-top: 10px;
-  background: #ff4d79;
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 1rem;
-}
-
-.popup-contenido button:hover {
-  background: #ff799d;
-}
-
-/* Animación suave de aparición */
+/* Animaciones */
 .fade-in {
   animation: fadeIn 0.3s ease;
 }
@@ -346,6 +264,7 @@ footer {
   color: white;
   text-align: center;
   padding: 2rem 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 footer p {
@@ -368,14 +287,13 @@ footer a:hover {
   header.hero h1 {
     font-size: 2.5rem;
   }
-@media (max-width: 768px) {
- header.hero img {
-  transform: scale(0.9); 
-  object-position: 65% center;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-}
+
+  header.hero img {
+    transform: scale(0.9); 
+    object-position: 65% center;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
 
   .countdown h2 {
     font-size: 2rem;
