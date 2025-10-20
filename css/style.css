@@ -342,6 +342,11 @@ footer a:hover {
   header.hero h1 {
     font-size: 2.5rem;
   }
+@media (max-width: 768px) {
+  header.hero img {
+    object-position: 65% center;
+  }
+}
 
   .countdown h2 {
     font-size: 2rem;
