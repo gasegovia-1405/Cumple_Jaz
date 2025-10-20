@@ -67,7 +67,24 @@
       margin: 1.5rem auto;
     }
 
-     /* Animaciones */
+    /* Botón ingresar */
+    #entrarBtn {
+      background-color: white;
+      color: #ff4d79;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    #entrarBtn:hover {
+      background-color: #ffe6ec;
+      transform: scale(1.05);
+    }
+
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -79,32 +96,17 @@
       }
     }
 
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Ocultar scroll mientras está la bienvenida */
     body.welcome-active {
       overflow: hidden;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .welcome-content h1 {
         font-size: 2.5rem;
         letter-spacing: 2px;
       }
-      
       .welcome-content .subtitle {
         font-size: 1.2rem;
-      }
-
-      .loader {
-        width: 50px;
-        height: 50px;
-        border-width: 4px;
       }
     }
   </style>
@@ -118,7 +120,7 @@
     <p class="subtitle">Jazmín</p>
     <hr>
     <p class="subtitle">Estás invitado a acompañarme en mi noche tan especial</p>
-    <div class="loader"></div>
+    <button id="entrarBtn">Ingresar</button>
   </div>
 </div>
 
@@ -286,22 +288,26 @@
   function hideWelcome() {
     const welcomeScreen = document.getElementById('welcome-screen');
     welcomeScreen.classList.add('fade-out');
-    
-    // 🎵 REPRODUCIR MÚSICA AUTOMÁTICAMENTE AL CERRAR LA BIENVENIDA
-    const musica = document.getElementById('musicaFondo');
-    musica.play().catch(error => {
-      console.log("No se pudo reproducir la música automáticamente");
-    });
-    
     setTimeout(() => {
       welcomeScreen.style.display = 'none';
       document.body.classList.remove('welcome-active');
     }, 1200);
   }
 
-  // Ocultar automáticamente después de 3 segundos
-  window.addEventListener('load', () => {
-    setTimeout(hideWelcome, 3000);
+  // ==== FUNCIÓN PARA INICIAR MÚSICA ====
+  function iniciarMusica() {
+    const musica = document.getElementById('musicaFondo');
+    musica.play().then(() => {
+      console.log("🎵 Música iniciada");
+    }).catch(err => {
+      console.log("⚠️ No se pudo reproducir la música:", err);
+    });
+  }
+
+  // ==== BOTÓN INGRESAR ====
+  document.getElementById('entrarBtn').addEventListener('click', () => {
+    hideWelcome();
+    iniciarMusica();
   });
 
   // ==== INICIALIZAR AOS ====
@@ -345,7 +351,7 @@
     window.open(`https://wa.me/+5493584314424?text=${encodeURIComponent(mensaje)}`, '_blank');
   }
 
-  // ==== CARRUSELES DINÁMICOS ====
+  // ==== CARRUSELES ====
   const images = [
     './assets/jazz (1).jpg',
     './assets/jazz (2).jpg',
@@ -381,11 +387,10 @@
   createCarousel('carouselDynamic1');
   createCarousel('carouselDynamic2');
 
-  // ==== MÚSICA DE FONDO ====
+  // ==== CONTROL BOTÓN DE MÚSICA ====
   const musica = document.getElementById('musicaFondo');
   const botonMusica = document.getElementById('botonMusica');
 
-  // Botón para pausar/reproducir manualmente
   botonMusica.addEventListener('click', () => {
     if (musica.paused) {
       musica.play();
